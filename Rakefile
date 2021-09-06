@@ -1,4 +1,5 @@
 require_relative './config/environment'
+# using this gem we can run migrate
 require 'sinatra/activerecord/rake'
 
 desc "Runs a Pry console"
@@ -9,3 +10,6 @@ task :console do
   # Open a Pry session
   Pry.start
 end
+# Test the class using rake console (or bundle exec rake console)
+#rake console # [1] pry(main)> Artist
+#=> Artist (call 'Artist.connection' to establish a connection) 
